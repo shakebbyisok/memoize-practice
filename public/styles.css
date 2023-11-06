@@ -1,0 +1,74 @@
+/* style.css */
+
+/* General body styling */
+body {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Container styling */
+  .container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header styling */
+  h1 {
+    color: #007bff;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Input and button styling */
+  input[type="number"],
+  button {
+    height: 3rem;
+    border-radius: 0.25rem;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+  /* Result alert styling */
+  .alert {
+    padding: 1rem;
+    margin-top: 1rem;
+    border: none;
+    border-left: 0.25rem solid transparent;
+    border-radius: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .alert-success {
+    background-color: #d4edda;
+    border-left-color: #28a745;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    border-left-color: #dc3545;
+  }
+  
+  /* Custom alerts for time and cache hit */
+  #timeTaken {
+    font-weight: bold;
+  }
+  
+  #cacheHit {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Fibonacci</title>
+    <!-- Incluir Bootstrap CDN para estilos rápidos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Estilos adicionales para el color del texto -->
+    <style>
+      #timeTaken { color: orangered; }
+      #cacheHit { color: rebeccapurple; }
+    </style>
+    <script type="module" src="../dist/main.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Calculadora Fibonacci</h1>
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <input type="number" id="fibInput" class="form-control" placeholder="Introduce un número...">
+                <button id="calcButton" class="btn btn-primary btn-block mt-3">Calcular</button>
+                <div id="result" class="alert mt-3" style="display: none;"></div>
+                <!-- Div para el tiempo de cálculo y el caché -->
+                <div id="timeTaken" class="mt-3" style="display: none;"></div>
+                <div id="cacheHit" class="mt-3" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Incluir Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
