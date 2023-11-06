@@ -1,34 +1,34 @@
 
-# Pràctica de Memoització de Fibonacci
+# Práctica de Memoización de Fibonacci
 
-Aquest repositori es centra en la implementació d'una funció de memoització per a la seqüència de Fibonacci fent ús de TypeScript i proves unitàries. A més, inclou una Interfície de Línia de Comandes (CLI) i una interfície d'usuari front-end per demostrar i provar la seva funcionalitat en temps real.
+Este repositorio se centra en la implementación de una función de memoización para la secuencia de Fibonacci utilizando TypeScript y pruebas unitarias. Además, incluye una Interfaz de Línea de Comandos (CLI) y una interfaz de usuario front-end para demostrar y probar su funcionalidad en tiempo real.
 
-## Característiques
+## Características
 
-- **Memoització de Fibonacci**: Millora l'eficiència de càlcul de la seqüència de Fibonacci mitjançant l'emmagatzematge de resultats previs.
-- **CLI**: Una eina de línia de comandes que permet als usuaris interactuar amb la funció de Fibonacci i observar els beneficis de la memoització.
-- **Interfície Front-end**: Una pàgina web senzilla que permet als usuaris introduir un número i calcular el seu corresponent valor a la seqüència de Fibonacci, mostrant tant el resultat com si el càlcul va ser obtingut de la caché.
+- **Memoización de Fibonacci**: Mejora la eficiencia del cálculo de la secuencia de Fibonacci mediante el almacenamiento de resultados previos.
+- **CLI**: Una herramienta de línea de comandos que permite a los usuarios interactuar con la función de Fibonacci y observar los beneficios de la memoización.
+- **Interfaz Front-end**: Una página web sencilla que permite a los usuarios introducir un número y calcular su correspondiente valor en la secuencia de Fibonacci, mostrando tanto el resultado como si el cálculo fue obtenido de la caché.
 
-## Com executar
+## Cómo ejecutar
 
-Segueix aquests passos per executar el projecte:
+Sigue estos pasos para ejecutar el proyecto:
 
-1. **Clona aquest repositori a la teva màquina local**:
+1. **Clona este repositorio en tu máquina local**:
    ```
    git clone https://github.com/shakebbyisok/memoize-practice.git
    ```
    
-2. **Entra al directori correcte**:
+2. **Entra al directorio correcto**:
    ```
    cd memoize-practice
    ```
    
-3. **Instal·lació de dependències**:
+3. **Instalación de dependencias**:
    ```
    npm install
    ```
    
-4. **Executar els tests**:
+4. **Ejecutar las pruebas**:
    ```
    npm test
    ```
@@ -38,13 +38,14 @@ Segueix aquests passos per executar el projecte:
    npm start
    ```
    
-6. **Veure la funcionalitat en el front-end**:
-   Obre l'arxiu `index.html` en un navegador, preferentment amb un servidor local com `live-server`.
+6. **Ver la funcionalidad en el front-end**:
+   Abre el archivo `index.html` en un navegador, preferentemente con un servidor local como `live-server`.
 
-(En el front-end, pots observar els resultats instantanis i si la resposta va ser recuperada de la caché).
+(En el front-end, puedes observar los resultados instantáneos y si la respuesta fue recuperada de la caché).
 
-### Notes Addicionals
+### Notas Adicionales
 
-- Pots ajustar la mida de la caché i altres paràmetres segons sigui necessari dins del codi.
-- La implementació de la memoització mostra avantatges significatives en termes de rendiment quan es calculen números grans.
-- A partir del 40 al ordinador li costa procesar el resultar
+- Puedes ajustar el tamaño de la caché y otros parámetros según sea necesario dentro del código.
+- La implementación de la memoización muestra ventajas significativas en términos de rendimiento cuando se calculan números grandes.
+- A partir del número 40, al ordenador le cuesta procesar el resultado.
+- He añadido la duración del cálculo, y también se indica si el resultado se ha obtenido de la memoria caché, tanto en la CLI como en el front-end.
