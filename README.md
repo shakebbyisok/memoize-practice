@@ -44,8 +44,6 @@ Sigue estos pasos para ejecutar el proyecto:
 (En el front-end, puedes observar los resultados instantáneos y si la respuesta fue recuperada de la caché).
 
 ### Notas Adicionales
-
-- Puedes ajustar el tamaño de la caché y otros parámetros según sea necesario dentro del código.
 - La implementación de la memoización muestra ventajas significativas en términos de rendimiento cuando se calculan números grandes.
 - A partir del número 40, al ordenador le cuesta procesar el resultado.
 - He añadido la duración del cálculo, y también se indica si el resultado se ha obtenido de la memoria caché, tanto en la CLI como en el front-end.
