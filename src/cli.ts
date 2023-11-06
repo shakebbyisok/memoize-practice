@@ -32,6 +32,6 @@ askForNumber();
 
 // Evento de cierre para la interfaz readline
 rl.on('close', () => {
-  console.log('¡Adiós!');
+  console.log('¡Adiós, Juan Carlos:D!');
   process.exit(0);
 });
