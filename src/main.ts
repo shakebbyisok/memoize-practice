@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       resultDiv.textContent = `El resultado de Fibonacci para ${number} es ${fibResult}`;
   
       timeDiv.style.display = 'block';
-      timeDiv.style.color = 'yellow';
+      timeDiv.style.color = 'orange';
       timeDiv.textContent = `Cálculo realizado en ${(end - start).toFixed(2)} ms.`;
   
       if (fromCache) {
