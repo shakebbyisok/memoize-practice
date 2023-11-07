@@ -49,5 +49,5 @@ Sigue estos pasos para ejecutar el proyecto:
 
 ### Notas Adicionales
 - La implementación de la memoización muestra ventajas significativas en términos de rendimiento cuando se calculan números grandes.
-- A partir del número 40, al ordenador le cuesta procesar el resultado.
+- A partir del número 40, el sistema tarda en procesar el resultado.
 - He añadido la duración del cálculo, y también se indica si el resultado se ha obtenido de la memoria caché, tanto en la CLI como en el front-end.
