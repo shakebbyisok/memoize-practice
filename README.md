@@ -5,19 +5,25 @@ Este repositorio se centra en la implementación de una función de memoización
 
 ## Características
 
-- **Memoización de Fibonacci**: Mejora la eficiencia del cálculo de la secuencia de Fibonacci mediante el almacenamiento de resultados previos.
-- **CLI**: Una herramienta de línea de comandos que permite a los usuarios interactuar con la función de Fibonacci y observar los beneficios de la memoización.
-- **Interfaz Front-end**: Una página web sencilla que permite a los usuarios introducir un número y calcular su correspondiente valor en la secuencia de Fibonacci, mostrando tanto el resultado como si el cálculo fue obtenido de la caché.
+- **Memoización de Fibonacci**: Implementa una técnica de memoización para mejorar drásticamente la eficiencia del cálculo de la secuencia de Fibonacci.
+- **Comparación de Rendimiento**: La práctica permite comparar directamente el rendimiento entre la implementación estándar y la memoizada.
+- **CLI**: Una herramienta de línea de comandos para interactuar con la función de Fibonacci y observar los beneficios de la memoización.
+- **Interfaz Front-end**: Permite a los usuarios calcular valores de la secuencia de Fibonacci y muestra el resultado y si se recuperó de la caché.
 
 ![Ejemplo en CLI:](https://i.imgur.com/3Knn9Mw.jpg)
 
+## Diferencias en Rendimiento
 
+Sin memoización, la función de Fibonacci calcula valores de forma recursiva sin almacenar ningún resultado previo. Esto significa que para calcular `fib(n)`, también se calculan todos los valores previos de `fib(n-1)`, `fib(n-2)`, ..., `fib(1)` repetidas veces. Con un aumento exponencial en las llamadas a función, el tiempo de ejecución crece dramáticamente con cada incremento en `n`.
+
+Con memoización, una vez que se calcula un valor de Fibonacci, se almacena en una caché. Las sucesivas llamadas a `fib(n)` pueden devolver inmediatamente el valor almacenado sin recálculo, lo que reduce la complejidad de tiempo de O(2^n) a O(n). Esto hace que calcular valores grandes como `fib(50)` o `fib(3000)` sea prácticamente instantáneo, mientras que sin memoización, podrían ser inmanejables.
 
 ## Cómo ejecutar
 
 Sigue estos pasos para ejecutar el proyecto:
 
 1. **Clona este repositorio en tu máquina local**:
+
    ```
    git clone https://github.com/shakebbyisok/memoize-practice.git
    ```
@@ -40,14 +46,14 @@ Sigue estos pasos para ejecutar el proyecto:
 5. **Iniciar la CLI**:
    ```
    npm start
-   ```
-   
+   ``` 
+
 6. **Ver la funcionalidad en el front-end**:
-   Abre el archivo `index.html` en un navegador, preferentemente con un servidor local como `live-server`.
+Abre el archivo `index.html` en un navegador, preferentemente con un servidor local como `live-server`.
 
 (En el front-end, puedes observar los resultados instantáneos y si la respuesta fue recuperada de la caché).
 
 ### Notas Adicionales
 - La implementación de la memoización muestra ventajas significativas en términos de rendimiento cuando se calculan números grandes.
-- A partir del número 40, el sistema tarda en procesar el resultado.
-- He añadido la duración del cálculo, y también se indica si el resultado se ha obtenido de la memoria caché, tanto en la CLI como en el front-end.
+- Se añade la duración del cálculo en la salida, mostrando la efectividad de la memoización con respecto al tiempo de ejecución.
+
