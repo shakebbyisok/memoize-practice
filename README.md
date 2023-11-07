@@ -9,6 +9,9 @@ Este repositorio se centra en la implementación de una función de memoización
 - **CLI**: Una herramienta de línea de comandos que permite a los usuarios interactuar con la función de Fibonacci y observar los beneficios de la memoización.
 - **Interfaz Front-end**: Una página web sencilla que permite a los usuarios introducir un número y calcular su correspondiente valor en la secuencia de Fibonacci, mostrando tanto el resultado como si el cálculo fue obtenido de la caché.
 
+  ![Ejemplo en CLI:](https://imgur.com/3Knn9Mw)
+
+
 ## Cómo ejecutar
 
 Sigue estos pasos para ejecutar el proyecto:
