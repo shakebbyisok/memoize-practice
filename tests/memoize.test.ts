@@ -1,35 +1,44 @@
-import { memoize, fib } from '../src/memoize';
+import { recursiveFib, memoizedFib } from '../src/memoize';
 
-describe('memoize function', () => {
+describe('Fibonacci functions', () => {
   // ... other tests ...
 
-  it('should correctly memoize the Fibonacci function', () => {
-    const memoizedFib = memoize(fib);
+  it('should calculate Fibonacci numbers recursively', () => {
+    expect(recursiveFib(10)).toBe(55); // example for simple test
+  });
 
-    // Time non-memoized call for benchmarking
+  it('should calculate Fibonacci numbers with memoization', () => {
+    // Time non-memoized recursive call for benchmarking
     const nonMemoizedStart = performance.now();
-    fib(30);
+    const nonMemoizedResult = recursiveFib(30);
     const nonMemoizedEnd = performance.now();
 
-    // Time first call to memoized function (not expected to be faster)
-    const firstCallStart = performance.now();
-    memoizedFib(30);
-    const firstCallEnd = performance.now();
+    // Time first call to memoized function
+    const firstMemoizedStart = performance.now();
+    const firstMemoizedResult = memoizedFib(30);
+    const firstMemoizedEnd = performance.now();
 
-    // Time second call to memoized function (should be faster)
-    const secondCallStart = performance.now();
-    memoizedFib(30);
-    const secondCallEnd = performance.now();
+    // Time second call to memoized function (should be instant or near-instant due to memoization)
+    const secondMemoizedStart = performance.now();
+    const secondMemoizedResult = memoizedFib(30);
+    const secondMemoizedEnd = performance.now();
 
     const nonMemoizedDuration = nonMemoizedEnd - nonMemoizedStart;
-    const firstCallDuration = firstCallEnd - firstCallStart;
-    const secondCallDuration = secondCallEnd - secondCallStart;
+    const firstMemoizedDuration = firstMemoizedEnd - firstMemoizedStart;
+    const secondMemoizedDuration = secondMemoizedEnd - secondMemoizedStart;
 
-    console.log(`Non-memoized call took ${nonMemoizedDuration} ms`);
-    console.log(`First memoized call took ${firstCallDuration} ms`);
-    console.log(`Second memoized call took ${secondCallDuration} ms`);
+    console.log(`Non-memoized call took ${nonMemoizedDuration.toFixed(3)} ms`);
+    console.log(`First memoized call took ${firstMemoizedDuration.toFixed(3)} ms`);
+    console.log(`Second memoized call took ${secondMemoizedDuration.toFixed(3)} ms`);
 
-    // The second memoized call should be faster than the non-memoized call
-    expect(secondCallDuration).toBeLessThan(nonMemoizedDuration);
+    // Validate the results are as expected
+    expect(nonMemoizedResult).toBe(firstMemoizedResult);
+    expect(firstMemoizedResult).toBe(secondMemoizedResult);
+
+    // The second memoized call should be significantly faster than the first memoized call
+    expect(secondMemoizedDuration).toBeLessThan(firstMemoizedDuration);
+
+    // For thoroughness, check that the first memoized call isn't slower than the non-memoized call by an unexpected margin
+    expect(firstMemoizedDuration).toBeLessThan(nonMemoizedDuration * 10); // Adjust the multiplier as necessary for your use case
   });
 });
